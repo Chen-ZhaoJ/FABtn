@@ -12,7 +12,7 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         case left
         case right
     }
-    struct ViewModel{
+    public struct ViewModel{
         var fabDirection: FabDirection = .left
         var btnLeftOrRightSpace: CGFloat = 0
         var btnBottom: CGFloat = 0
