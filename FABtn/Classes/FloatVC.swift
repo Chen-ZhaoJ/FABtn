@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class FloatVC: UIViewController, CAAnimationDelegate{
+public final class FloatVC: UIViewController, CAAnimationDelegate{
     enum FabDirection {
         case left
         case right
@@ -58,19 +58,19 @@ public class FloatVC: UIViewController, CAAnimationDelegate{
         vm.intervalOfButtons = initVM.intervalOfButtons
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
         initialMask()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard isExpand == false else { return }
         expand()
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let location = touches.first?.location(in: view) else { return }
         guard !btns[0].frame.contains(location) else { return }
         collapse()
@@ -230,7 +230,7 @@ public class FloatVC: UIViewController, CAAnimationDelegate{
         views[index].layer.add(animPosition, forKey: nil)
     }
     
-    private func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         guard isExpand == false else { return }
         guard let key = anim.value(forKey: "id") as? String else { return }
         guard key == "animPosition" else { return }
