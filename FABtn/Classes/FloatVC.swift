@@ -231,3 +231,4 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         self.dismiss(animated: false)
     }
 }
+
