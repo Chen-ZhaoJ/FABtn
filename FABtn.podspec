@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FABtn'
-  s.version          = '0.1.4'
+  s.version          = '0.1.1'
   s.summary          = 'CreateFAB'
 
 # This description is used to generate tags and improve search results.
