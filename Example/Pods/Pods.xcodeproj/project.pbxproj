@@ -40,7 +40,7 @@
 		19C69753A8B1207E8B75797B5D13E9D7 /* FABtn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FABtn.debug.xcconfig; sourceTree = "<group>"; };
 		1CFAC7FC1E7F01D4496D821FC8970B55 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1D7930B421443D445E2CE590FBFFCA87 /* Pods-FABtn_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FABtn_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2A996E29DD5CA2C225062CB4A8CF2361 /* Pods-FABtn_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FABtn_Example"; path = Pods_FABtn_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A996E29DD5CA2C225062CB4A8CF2361 /* Pods_FABtn_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FABtn_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3574E26A0FA293AD531B31AAEBD9EDBB /* FABtn-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FABtn-Info.plist"; sourceTree = "<group>"; };
 		3B900E6B8FE416853B5D1A9DB96A79B6 /* Pods-FABtn_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FABtn_Example-umbrella.h"; sourceTree = "<group>"; };
 		3D9C0A9322910E833F6AC2E235CE0A5A /* FABtn.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FABtn.modulemap; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		897B24946BCF741ED8BBD86ED1168768 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		980B5314FDAAD6C09C77E43D4024C5E3 /* Pods-FABtn_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FABtn_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A652820A89BD78ADFF35D09C89337F64 /* Pods-FABtn_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FABtn_Tests"; path = Pods_FABtn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A652820A89BD78ADFF35D09C89337F64 /* Pods_FABtn_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FABtn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A816EAAB8BF13C868E0F672411C45C96 /* Pods-FABtn_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FABtn_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B84DD379EDE08E71B54C3CB34A369135 /* FABtn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FABtn.release.xcconfig; sourceTree = "<group>"; };
 		BB57FD824DA3C119FA43386235494220 /* Pods-FABtn_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FABtn_Tests.modulemap"; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		C247A41575B90E6536C8AFCBD14F2974 /* Pods-FABtn_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FABtn_Example.modulemap"; sourceTree = "<group>"; };
 		C83540D51E948A5AE8912B06E50F7A03 /* Pods-FABtn_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FABtn_Example-dummy.m"; sourceTree = "<group>"; };
 		E8029F8807CBE3FF127FCD5CB54AEBF3 /* Pods-FABtn_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FABtn_Tests-Info.plist"; sourceTree = "<group>"; };
-		F141875161A9D152C894FA44627808F9 /* FABtn */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FABtn; path = FABtn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F141875161A9D152C894FA44627808F9 /* FABtn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FABtn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F6D23DDE8CA4844AFC5C0247B0EDAB /* Pods-FABtn_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FABtn_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FE719F51D8F2746E4B7B3E1222A7B39C /* FABtn-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FABtn-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,9 +216,9 @@
 		FD69A5FD209C6D83C5383FEB1946FE44 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F141875161A9D152C894FA44627808F9 /* FABtn */,
-				2A996E29DD5CA2C225062CB4A8CF2361 /* Pods-FABtn_Example */,
-				A652820A89BD78ADFF35D09C89337F64 /* Pods-FABtn_Tests */,
+				F141875161A9D152C894FA44627808F9 /* FABtn.framework */,
+				2A996E29DD5CA2C225062CB4A8CF2361 /* Pods_FABtn_Example.framework */,
+				A652820A89BD78ADFF35D09C89337F64 /* Pods_FABtn_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			);
 			name = "Pods-FABtn_Tests";
 			productName = Pods_FABtn_Tests;
-			productReference = A652820A89BD78ADFF35D09C89337F64 /* Pods-FABtn_Tests */;
+			productReference = A652820A89BD78ADFF35D09C89337F64 /* Pods_FABtn_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		96B95B03AA659C52715A994F1D41F485 /* Pods-FABtn_Example */ = {
@@ -288,7 +288,7 @@
 			);
 			name = "Pods-FABtn_Example";
 			productName = Pods_FABtn_Example;
-			productReference = 2A996E29DD5CA2C225062CB4A8CF2361 /* Pods-FABtn_Example */;
+			productReference = 2A996E29DD5CA2C225062CB4A8CF2361 /* Pods_FABtn_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CD3D896CEEE063F6CC15F19E0D09C701 /* FABtn */ = {
@@ -306,7 +306,7 @@
 			);
 			name = FABtn;
 			productName = FABtn;
-			productReference = F141875161A9D152C894FA44627808F9 /* FABtn */;
+			productReference = F141875161A9D152C894FA44627808F9 /* FABtn.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -483,7 +483,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FABtn_Example/Pods-FABtn_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FABtn_Example/Pods-FABtn_Example.modulemap";
@@ -517,7 +517,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FABtn_Example/Pods-FABtn_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FABtn_Example/Pods-FABtn_Example.modulemap";
@@ -550,7 +550,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FABtn/FABtn-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FABtn/FABtn-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FABtn/FABtn.modulemap";
 				PRODUCT_MODULE_NAME = FABtn;
@@ -581,7 +581,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FABtn/FABtn-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FABtn/FABtn-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FABtn/FABtn.modulemap";
 				PRODUCT_MODULE_NAME = FABtn;
@@ -613,7 +613,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FABtn_Tests/Pods-FABtn_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FABtn_Tests/Pods-FABtn_Tests.modulemap";
@@ -713,7 +713,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FABtn_Tests/Pods-FABtn_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FABtn_Tests/Pods-FABtn_Tests.modulemap";
