@@ -39,7 +39,7 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         super.init(coder: coder)
     }
     
-    public convenience init?(fabDirection: FabDirection? = .left, btnLeftOrRightSpace: CGFloat? = 0, btnBottom: CGFloat? = 0, buttonSize: CGFloat? = 50, intervalOfButtons: CGFloat? = 5, lblTextSize: Double? = 20, lblTextColor: UIColor? = UIColor.systemYellow, maskAlpha: CGFloat? = 0.5, maskColor: UIColor? = UIColor.black){
+    public convenience init?(fabDirection: FabDirection = .left, btnLeftOrRightSpace: CGFloat = 0, btnBottom: CGFloat = 0, buttonSize: CGFloat = 50, intervalOfButtons: CGFloat = 5, lblTextSize: Double = 20, lblTextColor: UIColor = UIColor.systemYellow, maskAlpha: CGFloat = 0.5, maskColor: UIColor = UIColor.black){
         self.init()
         vm.fabDirection = fabDirection
         vm.btnLeftOrRightSpace = btnLeftOrRightSpace
