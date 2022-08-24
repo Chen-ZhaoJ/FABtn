@@ -8,7 +8,7 @@
 import UIKit
 
 public final class FloatVC: UIViewController, CAAnimationDelegate{
-    enum FabDirection {
+    public enum FabDirection {
         case left
         case right
     }
@@ -41,15 +41,15 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
     
     public convenience init?(fabDirection: FabDirection = .left, btnLeftOrRightSpace: CGFloat = 0, btnBottom: CGFloat = 0, buttonSize: CGFloat = 50, intervalOfButtons: CGFloat = 5, lblTextSize: Double = 20, lblTextColor: UIColor = UIColor.systemYellow, maskAlpha: CGFloat = 0.5, maskColor: UIColor = UIColor.black){
         self.init()
-        vm.fabDirection = fabDirection ?? .left
-        vm.btnLeftOrRightSpace = btnLeftOrRightSpace ?? 0
-        vm.btnBottom = btnBottom ?? 0
-        vm.buttonSize = buttonSize ?? 50
-        vm.intervalOfButtons = intervalOfButtons ?? 5
-        vm.lblTextSize = lblTextSize ?? 20
-        vm.lblTextColor = lblTextColor ?? UIColor.systemYellow
-        vm.maskAlpha = maskAlpha ?? 0.5
-        vm.maskColor = maskColor ?? UIColor.black
+        vm.fabDirection = fabDirection
+        vm.btnLeftOrRightSpace = btnLeftOrRightSpace
+        vm.btnBottom = btnBottom
+        vm.buttonSize = buttonSize
+        vm.intervalOfButtons = intervalOfButtons
+        vm.lblTextSize = lblTextSize
+        vm.lblTextColor = lblTextColor
+        vm.maskAlpha = maskAlpha
+        vm.maskColor = maskColor
     }
     
     public override func viewDidLoad() {
