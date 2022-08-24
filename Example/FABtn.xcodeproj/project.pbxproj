@@ -42,11 +42,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		70A89155353207D356CA1A9E /* Pods-FABtn_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FABtn_Example.release.xcconfig"; path = "Target Support Files/Pods-FABtn_Example/Pods-FABtn_Example.release.xcconfig"; sourceTree = "<group>"; };
-		88648AAEA4FD5924B3E63203 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		88648AAEA4FD5924B3E63203 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		94AA3389CD64B622099824A1 /* Pods_FABtn_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FABtn_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52B3CA39E8E294999AF6811 /* Pods-FABtn_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FABtn_Tests.release.xcconfig"; path = "Target Support Files/Pods-FABtn_Tests/Pods-FABtn_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B25F3E32B6BD8CB27ADA8D48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E81381C7243191C2A16D7790 /* FABtn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FABtn.podspec; path = ../FABtn.podspec; sourceTree = "<group>"; };
+		B25F3E32B6BD8CB27ADA8D48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E81381C7243191C2A16D7790 /* FABtn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FABtn.podspec; path = ../FABtn.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				14F86EA5328F5B9CCA1CD1DB /* Pods-FABtn_Tests.debug.xcconfig */,
 				A52B3CA39E8E294999AF6811 /* Pods-FABtn_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

@@ -1,0 +1,16 @@
+PODS:
+  - FABtn (0.1.0)
+
+DEPENDENCIES:
+  - FABtn (from `../`)
+
+EXTERNAL SOURCES:
+  FABtn:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FABtn: 4c92e0b5e209f8ff805246022cecf6512c61b43e
+
+PODFILE CHECKSUM: daa946106df4a98f5521cddde549c01acfa10126
+
+COCOAPODS: 1.11.3
