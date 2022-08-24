@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FloatVC: UIViewController, CAAnimationDelegate{
+class FloatVC: UIViewController, CAAnimationDelegate{
     enum FabDirection {
         case left
         case right
@@ -76,14 +76,14 @@ final class FloatVC: UIViewController, CAAnimationDelegate{
         collapse()
     }
     
-    func createFAB(image: UIImage, title: String? = nil, color: UIColor, target: Selector? = nil, atVC: Any? = nil){
+    public func createFAB(image: UIImage, title: String? = nil, color: UIColor, target: Selector? = nil, atVC: Any? = nil){
         let index = views.count
         createView(index: index)
         createLabel(index: index, title: title ?? "")
         createButton(image: image, index: index, color: color,target: target, atVC: atVC)
     }
         
-    func collapseFAB(){
+    public func collapseFAB(){
         guard isExpand == true else { return }
         collapse()
     }
