@@ -212,7 +212,7 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         animRotate.delegate = self
         animRotate.duration = duration //動畫速度
         animRotate.isRemovedOnCompletion = false //結束時不回復原樣
-        animRotate.fillMode = CAMediaTimingFillMode.forwards //讓layer停在toValue
+        animRotate.fillMode = kCAFillModeForwards //讓layer停在toValue
         animRotate.toValue = toValue //設定動畫結束值
         animRotate.repeatCount = repeatCount //旋轉次數（正1為順時針一圈，負為逆時針）
         btn.imageView?.layer.add(animRotate, forKey: nil)
@@ -223,7 +223,7 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         animPosition.delegate = self
         animPosition.duration = duration
         animPosition.isRemovedOnCompletion = false
-        animPosition.fillMode = CAMediaTimingFillMode.forwards
+        animPosition.fillMode = kCAFillModeForwards
         animPosition.fromValue = fromValue
         animPosition.toValue = toValue
         animPosition.setValue("animPosition", forKey: "id")
