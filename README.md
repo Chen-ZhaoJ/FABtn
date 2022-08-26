@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+iOS Deployment Target: 13.0
+
 ## Installation
 
 FABtn is available through [CocoaPods](https://cocoapods.org). To install

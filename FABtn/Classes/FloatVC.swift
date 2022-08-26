@@ -16,12 +16,9 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         var fabDirection: FabDirection = .left
         var btnLeftOrRightSpace: CGFloat = 30
         var btnBottom: CGFloat = -40
-        var buttonSize: CGFloat = 50
+        var btnPadding: CGFloat = 5
+        var btnSize: CGFloat = 50
         var lblTextSize: Double = 20
-        var lblTextColor: UIColor = UIColor.systemYellow
-        var maskAlpha: CGFloat = 0.5
-        var maskColor: UIColor = UIColor.black
-        var intervalOfButtons: CGFloat = 5
     }
     private var vm = ViewModel()
     private var isExpand: Bool = false
@@ -39,17 +36,14 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         super.init(coder: coder)
     }
     
-    public convenience init(fabDirection: FabDirection = .left, btnLeftOrRightSpace: CGFloat = 30, btnBottom: CGFloat = -40, buttonSize: CGFloat = 50, intervalOfButtons: CGFloat = 5, lblTextSize: Double = 20, lblTextColor: UIColor = UIColor.systemYellow, maskAlpha: CGFloat = 0.5, maskColor: UIColor = UIColor.black){
+    public convenience init(fabDirection: FabDirection = .left, btnLeftOrRightSpace: CGFloat = 30, btnBottom: CGFloat = -40, btnPadding: CGFloat = 5, btnSize: CGFloat = 50, lblTextSize: Double = 20){
         self.init()
         vm.fabDirection = fabDirection
         vm.btnLeftOrRightSpace = btnLeftOrRightSpace
         vm.btnBottom = btnBottom
-        vm.buttonSize = buttonSize
-        vm.intervalOfButtons = intervalOfButtons
+        vm.btnPadding = btnPadding
+        vm.btnSize = btnSize
         vm.lblTextSize = lblTextSize
-        vm.lblTextColor = lblTextColor
-        vm.maskAlpha = maskAlpha
-        vm.maskColor = maskColor
     }
     
     public override func viewDidLoad() {
@@ -71,11 +65,11 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         collapse()
     }
     
-    public func createFAB(image: UIImage, title: String? = nil, color: UIColor, target: Selector? = nil, atVC: Any? = nil){
+    public func createFAB(image: UIImage, title: String? = nil, btnColor: UIColor, lblColor: UIColor = .black, target: Selector? = nil, atVC: Any? = nil){
         let index = views.count
         createView(index: index)
-        createLabel(index: index, title: title ?? "")
-        createButton(image: image, index: index, color: color,target: target, atVC: atVC)
+        createLabel(index: index, color: lblColor, title: title ?? "")
+        createButton(image: image, index: index, color: btnColor,target: target, atVC: atVC)
     }
         
     public func collapseFAB(){
@@ -98,7 +92,7 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         bottomAnchors.insert(bottomConstraint, at: index)
         bottomAnchors[index] = vi.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: vm.btnBottom)
         NSLayoutConstraint.activate([vi.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 0),
-                                     vi.heightAnchor.constraint(equalToConstant: vm.buttonSize),
+                                     vi.heightAnchor.constraint(equalToConstant: vm.btnSize),
                                      vi.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
                                      bottomAnchors[index]])
     }
@@ -118,10 +112,10 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         if vm.fabDirection == .left{
             lead = vm.btnLeftOrRightSpace
         }else{
-            lead = UIScreen.main.bounds.size.width-vm.btnLeftOrRightSpace-vm.buttonSize
+            lead = UIScreen.main.bounds.size.width-vm.btnLeftOrRightSpace-vm.btnSize
         }
-        NSLayoutConstraint.activate([bi.widthAnchor.constraint(equalToConstant: vm.buttonSize),
-                                     bi.heightAnchor.constraint(equalToConstant: vm.buttonSize),
+        NSLayoutConstraint.activate([bi.widthAnchor.constraint(equalToConstant: vm.btnSize),
+                                     bi.heightAnchor.constraint(equalToConstant: vm.btnSize),
                                      bi.leadingAnchor.constraint(equalTo: vi.leadingAnchor, constant: lead),
                                      bi.bottomAnchor.constraint(equalTo: vi.bottomAnchor, constant: 0)])
         if index == 0 {
@@ -131,13 +125,13 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         bi.addTarget(atVC, action: target ?? Selector(String()), for: UIControl.Event.touchUpInside)
     }
     
-    private func createLabel(index: Int, title: String){
+    private func createLabel(index: Int, color: UIColor, title: String){
         let label: UILabel = UILabel()
         lbls.insert(label, at: index)
         let li = lbls[index]
         let vi = views[index]
         li.text = title
-        li.textColor = vm.lblTextColor
+        li.textColor = color
         li.font = UIFont.systemFont(ofSize: vm.lblTextSize)
         li.isHidden = true
         
@@ -145,19 +139,19 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         li.translatesAutoresizingMaskIntoConstraints = false
         var lblLeading: CGFloat = 55
         if vm.fabDirection == .left{
-            lblLeading = vm.buttonSize+vm.btnLeftOrRightSpace+5
+            lblLeading = vm.btnSize+vm.btnLeftOrRightSpace+5
             li.textAlignment = .left
         }else{
             lblLeading = -5-vm.btnLeftOrRightSpace
             li.textAlignment = .right
         }
         NSLayoutConstraint.activate([li.centerYAnchor.constraint(equalTo: vi.centerYAnchor, constant: 0),
-                                     li.widthAnchor.constraint(equalTo: vi.widthAnchor, constant: -vm.buttonSize),
+                                     li.widthAnchor.constraint(equalTo: vi.widthAnchor, constant: -vm.btnSize),
                                      li.leadingAnchor.constraint(equalTo: vi.leadingAnchor, constant: lblLeading)])
     }
 
     private func initialMask(){
-        customMaskView.backgroundColor = vm.maskColor.withAlphaComponent(vm.maskAlpha)
+        customMaskView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         view.insertSubview(customMaskView, at: 0)
         customMaskView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([customMaskView.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -176,9 +170,9 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         
         for i in 1 ..< views.count{ //顯示字、把button展開
             lbls[i].isHidden = false
-            bottomAnchors[i].constant = bottomAnchors[i].constant-CGFloat(i)*(btns[0].frame.width+vm.intervalOfButtons)
+            bottomAnchors[i].constant = bottomAnchors[i].constant-CGFloat(i)*(btns[0].frame.width+vm.btnPadding)
             let from = [v0.frame.midX,v0.frame.midY]
-            let to = [v0.frame.midX,v0.frame.midY-CGFloat(i)*(btns[0].frame.width+vm.intervalOfButtons)]
+            let to = [v0.frame.midX,v0.frame.midY-CGFloat(i)*(btns[0].frame.width+vm.btnPadding)]
             animationPosition(duration: 0.3, fromValue: from, toValue: to, index: i)
         }
         isExpand = !isExpand
@@ -194,7 +188,7 @@ public final class FloatVC: UIViewController, CAAnimationDelegate{
         
         for i in 1 ..< views.count{ //把button收回、隱藏字
             bottomAnchors[i].constant = vm.btnBottom
-            let from = [v0.frame.midX,v0.frame.midY-CGFloat(i)*(btns[0].frame.width+vm.intervalOfButtons)]
+            let from = [v0.frame.midX,v0.frame.midY-CGFloat(i)*(btns[0].frame.width+vm.btnPadding)]
             let to = [v0.frame.midX,v0.frame.midY]
             animationPosition(duration: 0.3, fromValue: from, toValue: to, index: i)
             lbls[i].isHidden = true

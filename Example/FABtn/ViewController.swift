@@ -11,7 +11,7 @@ import FABtn
 
 class ViewController: UIViewController {
 
-    let floatVC = FloatVC(fabDirection: .left, btnLeftOrRightSpace: 30, btnBottom: -30, buttonSize: 50, lblTextColor: UIColor.systemYellow)
+    let floatVC = FloatVC(fabDirection: .left, btnLeftOrRightSpace: 30, btnBottom: -30, btnPadding: 5, btnSize: 50, lblTextSize: 20)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,9 @@ class ViewController: UIViewController {
     }
     
     func createFloatVC(){
-        floatVC.createFAB(image: UIImage(), color: .black)
-        floatVC.createFAB(image: UIImage(), title: "collapse1", color: .yellow, target: #selector(sendMessage(_:)), atVC: self)
-        floatVC.createFAB(image: UIImage(), title: "no collapse", color: .yellow, target: #selector(none(_:)) , atVC: self)
+        floatVC.createFAB(image: UIImage(), btnColor: .black)
+        floatVC.createFAB(image: UIImage(), title: "collapse", btnColor: .yellow, lblColor: .yellow, target: #selector(collapse(_:)), atVC: self)
+        floatVC.createFAB(image: UIImage(), title: "no collapse", btnColor: .yellow, lblColor: .yellow, target: #selector(none(_:)) , atVC: self)
     }
     
     lazy var button: UIButton = {
@@ -67,12 +67,12 @@ extension ViewController {
         present(floatVC, animated: false)
     }
     
-    @IBAction func sendMessage (_ sender: UIButton){
+    @IBAction func collapse (_ sender: UIButton){
         print("one Button Clicked")
         floatVC.collapseFAB()
     }
 
     @IBAction func none (_ sender: UIButton){
-        print("three Button Clicked")
+        print("two Button Clicked")
     }
 }
